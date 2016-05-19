@@ -1,0 +1,114 @@
+<html>
+  <title>Login</title>
+  <head>
+    <script>
+      function check_id() {
+        window.open("check_id.php?id=" + document.member_form.id.value, "IDcheck", "left=200,top=200,width=250,height=100,scrollbars=no,resizable=yes");
+      }
+      function check_input() {
+        if (!document.member_form.id.value) {
+          alert("Type ID");    
+          document.member_form.id.focus();
+          return;
+        }
+        if (!document.member_form.nickname.value) {
+          alert("Type Nickname");    
+          document.member_form.nickname.focus();
+          return;
+        }
+        if (!document.member_form.passwd.value) {
+          alert("Type PW");    
+          document.member_form.passwd.focus();
+          return;
+        }
+        if (!document.member_form.passwd_confirm.value) {
+          alert("Type PW Confirm");    
+          document.member_form.passwd_confirm.focus();
+          return;
+        }
+        if (document.member_form.passwd.value != document.member_form.passwd_confirm.value) {
+          alert("PW doesn't match.\nPlease retype.");    
+          document.member_form.passwd.focus();
+          document.member_form.passwd.select();
+          return;
+        }
+        document.member_form.submit();
+      }
+      function reset_form() {
+        document.member_form.id.value = "";
+        document.member_form.nickname.value = "";
+        document.member_form.passwd.value = "";
+        document.member_form.passwd_confirm.value = "";
+        document.member_form.id.focus();
+        return;
+      }
+    </script>
+    <link rel="stylesheet" href="../style.css" type="text/css">  
+  </head>
+
+  <body topmargin="10">
+    <table border=0 cellspacing=0 cellpdding=0 width='776' align='center'>
+      <tr>
+        <td align='center'>
+          <h2>All About Food</h2></td></tr>
+    </table>
+    <table align=center border="0" cellspacing="0" cellpadding="15" width="718">
+      <tr>
+        <td align=center>
+          <form  name=member_form method=post action=insert.php>
+            <table border=0 cellspacing=0 cellpadding=0 align=center width="340" >
+              <tr>
+                <td bgcolor=DEDEDE>
+                  <!----------Sign up form start--------------->
+                  <table border="0" width=340 cellspacing="1" cellpadding="4">
+                    <tr>
+                      <td width=35% bgcolor=#F7F7F7 align=right style=padding-right:6> * ID</td>
+                      <td bgcolor=#FFFFFF style=padding-left:10>
+                        <input type=text size=12 class=m_box maxlength=12 name=id> 
+                        <font color=#2590B3></font>
+                        <input type=button value="Check" onClick="check_id()"> 
+                      </td>
+                    </tr>
+                    <tr>
+                      <td bgcolor=#F7F7F7 align=right style=padding-right:6> * Nickname</td>
+                      <td bgcolor=#FFFFFF style=padding-left:10>
+                        <input type=text size=12 class=m_box maxlength=12 name=nickname></td>
+                    </tr>
+                    <tr>
+                      <td bgcolor=#F7F7F7 align=right style=padding-right:6> * PW</td>
+                      <td bgcolor=#FFFFFF style=padding-left:10>
+                        <input type=password size=12 class=m_box maxlength=12 name=passwd><font color=#2590B3> 
+                        </font/></td>
+                      </tr>
+                      <tr>
+                        <td bgcolor=#F7F7F7 align=right style=padding-right:6> * PW Confirm</td>
+                        <td bgcolor=#FFFFFF style=padding-left:10>
+                          <input type=password size=12 class=m_box maxlength=12 name=passwd_confirm> </td>
+                      </tr>
+                      <tr>
+                        <td bgcolor=#F7F7F7 align=right style=padding-right:6> * Sex</td>
+                        <td bgcolor=#FFFFFF style=padding-left:10>
+                          <input type=radio name=sex value='M' checked>Male
+                          <input type=radio name=sex value='W'>Female
+                        </td>
+                      </tr>
+                    </table>
+                    <!----------Sign up form end--------------->
+                  </td>
+                </tr>
+                <tr>
+                  <td align=center height=60>
+                    <input type=button value="Submit" onclick=check_input()> 
+                    <input type=button value="Reset" onclick=reset_form()> 
+                  </td>
+                </tr>
+              </form>
+            </table>  
+          </td>
+        </tr>
+      </table>            
+    </td>
+  </tr>
+</table>
+</body>
+</html>
