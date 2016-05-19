@@ -1,0 +1,16 @@
+body { text-align:center; }
+.title_box { width:1000px; text-align:left; margin:auto; padding:20px; font-weight:bold; font-size:20px; }
+nav   { height:60px; }
+nav ul  { width:1000px; margin:0 auto; padding:0; }
+nav ul li { float:left; list-style:none; height:30px; line-height:180%; margin-right:-1px; width:16.5%; border:1px solid #D3D3D3; background:#F8F8F8; }
+nav ul li:first-child { border-radius:3px 0 0 3px; }
+nav ul li:last-child { border-radius:0 3px 3px 0; }
+nav ul li:hover  { background:#FFFFFF; cursor:pointer; }
+.visual_box { clear:both; width:1000px; margin:auto; height:313px; overflow:hidden; background:url("/image.jpg"); }
+.product_box { width:1000px; margin:auto; padding:50px; }
+.product_box .subject { font-size:80px; }
+.product_box .docu  { font-size:30px; }
+.product_box .btn input { border:1px solid #82C682; border-radius:2px; padding:10px 20px 10px 20px; background:#59B359; font-size:15px; font-weight:bold; color:#ffffff; }
+.product_box .btn input:hover { cursor:pointer; background:#C0E2C0; color:#59B359; }
+.content { width:1000px; margin:auto; border-top:1px solid #EFEFEF; border-bottom:1px solid #EFEFEF; }
+.content .span4 { float:left; width:33%; text-align:left; } 
